@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html class="no-js" lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link rel="shortcut icon" href="https://tiimg.tistatic.com/tradeindia.com/2008/images/favicon/favicon.ico">
+    <!-- Add manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Tell iOS it's a PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Make sure theme-color is defined -->
+    <meta name="theme-color" content="#536878">
+    <title>tradeindia.com</title>
+    <link href="https://st.tistatic.com/ver8093/css/mobile_site/styles.css" type="text/css" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://st.tistatic.com/ver8093/css/mobile_site/swiper.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://st.tistatic.com/ver8093/css/mobile_site/slidebars.css">
+    <link rel="stylesheet" href="https://st.tistatic.com/ver8093/css/mobile_site/animate.css">
+    <link rel="stylesheet" href="https://st.tistatic.com/ver8093/css/mobile_site/search.css" type="text/css" rel="stylesheet"
+    />
+
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="rfqBtn">
+        <a href="/sourcing/sourcing_requirements.html">RFQ</a>
+    </div>
+    <!--RFQ start -->
+    <div class="multipleInqBtn">
+        <span>0</span>
+        <a href="http://google.com">Send
+            <br/>Inquiry</a>
+    </div>
+    <!--RFQ end -->
+
+    <div class="container" canvas="container">
+
+        <header class="header clearfix">
+            <div class="headerTop clearfix">
+                <div class="menuIcon js-toggle-left-slidebar">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </div>
+                <div class="tiLogo">
+                    <a href="/">
+                        <img alt="tradeindia" src="https://tiimg.tistatic.com/new_website1/mobileSite/logo.png">
+                    </a>
+                </div>
+                <div class="headerRight">
+                    <a href="https://www.tradeindia.com/mobile/download_inquiry_messenger.html">
+                        <i aria-hidden="true" class="fa fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="searchTop">
+                <form name="global_search_form" id="search_frm_id" method="GET" action="/search_action.html">
+                    <div class="crossDiv">
+                        <span class="search-cross-btn">X</span>
+                    </div>
+                    <input type="hidden" name="search_form_id" value="30" />
+                    <input type="text" name="keyword" onblur="if(this.value=='')this.value=this.defaultValue" onfocus="if(this.value==this.defaultValue)this.value=''"
+                        value="Search Product/Service" class="searchInput" id="search-val" />
+                    <div class="mick" onclick="startSpeech();">
+                        <i class="fa fa-microphone " id="microphone" aria-hidden="true"></i>
+                    </div>
+                </form>
+            </div>
+            <!--mike popup start-->
+            <div class="mick-popup-bg" style="display:none;">
+                <div class="crossBtnPopup" onclick="closeMikePopup();">
+                    <i class="crossBtnColor fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="help-support-area">
+                    <div class="" id="open_chat">
+                        <i class="fa fa-microphone mickColor" id="microphone" aria-hidden="true"></i>
+                    </div>
+                    <div class="help-pulse help-pulse-one"></div>
+                    <div class="help-pulse help-pulse-two"></div>
+                </div>
+            </div>
+            <!--mike popup end-->
+            <!-- HTML5 Speech Recognition API -->
+            <script>
+                function startSpeech() {
+                    jQuery('.mick-popup-bg').show();
+                    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+                        var recognition = new webkitSpeechRecognition();
+                        recognition.continuous = false;
+                        recognition.interimResults = false;
+                        recognition.lang = "en-US";
+                        recognition.start();
+                        recognition.onresult = function (e) {
+                            document.getElementById('search-val').value = e.results[0][0].transcript;
+                            recognition.stop();
+                            jQuery('.mick-popup-bg').hide();
+                            document.getElementById('search_frm_id').submit();
+                        };
+                        recognition.onerror = function (e) {
+                            recognition.stop();
+                            setTimeout(function () {
+                                jQuery('.mick-popup-bg').hide();
+                            }, 1000);
+                        }
+                    }
+                }
+                function closeMikePopup() {
+                    jQuery('.mick-popup-bg').hide();
+                }
+            </script>
+
+
+
+        </header>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="space99"></div>
+        <h1 class="display_h1_tag">About 221 results found for "green+board" </h1>
+
+
+
+        <div class="cityNav">
+            <ul>
+                <li>
+                    <a href="/new-delhi/green+board-city-228066.html">New Delhi</a>
+                </li>
+                <li>
+                    <a href="/mumbai/green+board-city-207486.html">Mumbai</a>
+                </li>
+                <li>
+                    <a href="/hyderabad/green+board-city-196467.html">Hyderabad</a>
+                </li>
+                <li>
+                    <a href="/bengaluru/green+board-city-183339.html">Bengaluru</a>
+                </li>
+                <li>
+                    <a href="/chennai/green+board-city-187278.html">Chennai</a>
+                </li>
+                <li>
+                    <a href="/delhi/green+board-city-228067.html">Delhi</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="allCityLink">All</a>
+                </li>
+                <li>
+                    <i class="fa fa-map-marker mapIcon"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- all cities html start -->
+        <div class="categaryMenu hide">
+            <div class="toggleMenuTitle"> All Cities
+                <span class="crossIcon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div>
+                <ul>
+                    <li class="categorySelectOption">
+                        <a href="/ahmedabad/green+board-city-178823.html">Ahmedabad</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/ambala-cantt/green+board-city-179955.html">Ambala Cantt</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/indore/green+board-city-196883.html">Indore</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/jaipur/green+board-city-197559.html">Jaipur</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/kolkata/green+board-city-200579.html">Kolkata</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/noida/green+board-city-209017.html">Noida</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/pune/green+board-city-213577.html">Pune</a>
+                    </li>
+                    <li class="categorySelectOption">
+                        <a href="/surat/green+board-city-220891.html">Surat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- all cities html end -->
+
+
+
+        <div class="clearfix"></div>
+        <!-- super tag listing start-->
+
+        <div class="space10"></div>
+        <div>
+        </div>
+
+        <!-- super tag listing end-->
+        <!-- super premium listing start-->
+
+        <div>
+        </div>
+
+        <!-- super premium listing end-->
+        <!-- super Seller listing start-->
+
+        <div class="clearfix"></div>
+        <div>
+        </div>
+
+        <!-- super Seller listing end-->
+
+        <div class="space30"></div>
+        <!--product listing start -->
+        <div class="productListingDiv clearfix">
+            <div class="viewProduct clearfix">
+                <div class="totalProducts">View
+                    <span>221</span> Product(s) below</div>
+                <div class="gridListView">
+                    <i class="fa fa-list" aria-hidden="true"></i> Gallery</div>
+                <div class="gridView" style="display:none;">
+                    <i class="fa fa-th" aria-hidden="true"></i> Gallery</div>
+            </div>
+            <div class="product-listing" id="product-listing">
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-0" type="checkbox" value="value1">
+                    <label for="styled-checkbox-0" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/03547010/s/4/Laminated-Black-or-Green-Board.jpg" alt="Laminated Black Or Green Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.nckmaps.com/laminated-black-or-green-board-3547010.html">Laminated Black Or Green Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">17</span>
+                            <span class="red-strok">YR</span>
+                            <a href="#" target="_blank">
+                                <span class="trustStampIcon"></span>
+                            </a>
+                            <a href="/Seller-321415-N-C-KANSIL-SONS/">N. C. KANSIL & SONS</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> New Delhi, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-1" type="checkbox" value="value1">
+                    <label for="styled-checkbox-1" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/02363099/s/7/Green-Chalk-Boards.jpg" alt="Green Chalk Boards">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.vrengineering.in/green-chalk-boards-2363099.html">Green Chalk Boards</a>
+                            <a href="javascript:void(0)">
+                                <img class="dficon" src="https://tiimg.tistatic.com/new_website1/mobileSite/d-icon.png" alt="Domestic Inquiries"
+                                />
+                            </a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">6</span>
+                            <span class="red-strok">YR</span>
+                            <a href="#" target="_blank">
+                                <span class="trustStampIcon"></span>
+                            </a>
+                            <a href="/Seller-2023199-VR-ENGINEERING-WORKS/">VR ENGINEERING WORKS</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Hyderabad, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-2" type="checkbox" value="value1">
+                    <label for="styled-checkbox-2" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/00731519/s/4/laminated-green-chalk-boards.jpg" alt="Laminated Green Chalk Boards">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.hindustanarmystore.com/laminated-green-chalk-boards-731519.html">Laminated Green Chalk Boards</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">9</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-3007224-HINDUSTAN-ARMY-STORE/">HINDUSTAN ARMY STORE</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Ambala Cantt, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-3" type="checkbox" value="value1">
+                    <label for="styled-checkbox-3" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/03717661/s/4/Green-Writing-Board.jpg" alt="Green Writing Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.schoolfurnitureinpune.com/green-writing-board-3717661.html">Green Writing Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">2</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-11422104-SHREE-RUPNATH-ENTERPRISES/">SHREE RUPNATH ENTERPRISES</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Pune, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-4" type="checkbox" value="value1">
+                    <label for="styled-checkbox-4" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/04570835/s/4/Student-Green-Board.jpg" alt="Student Green Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.outmat.com/student-green-board-4570835.html">Student Green Board</a>
+                            <a href="javascript:void(0)">
+                                <img class="dficon" src="https://tiimg.tistatic.com/new_website1/mobileSite/d-icon.png" alt="Domestic Inquiries"
+                                />
+                            </a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">1</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-16819195-OUTMAT-STREET-PRODUCTS-PRIVATE-LIMITED/">OUTMAT STREET PRODUCTS PRIVATE LIMITED</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Jaipur, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-5" type="checkbox" value="value1">
+                    <label for="styled-checkbox-5" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://tiimg.tistatic.com/fp/thumb/4/709/writing-board-notice-board-509.jpg" alt="Writing Board, Notice Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="https://www.tradeindia.com/fp709509/Writing-Board-Notice-Board.html">Writing Board, Notice Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">9</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-77742-DIGITECH-SYSTEMS/">DIGITECH SYSTEMS</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Akola, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Google AdSense -->
+                <div style="margin: 10px 0;width:100%;">
+                        <img src="https://tpc.googlesyndication.com/simgad/17597830071087955490?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qm1Ck7M3feY6Y1cHzEwg1mR9VY56A" />
+                </div>
+                <!-- Google AdSense -->
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-6" type="checkbox" value="value1">
+                    <label for="styled-checkbox-6" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/00846831/s/5/Green-Chalk-Board.jpg" alt="Green Chalk Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.ajantaexportindustries.com/green-chalk-board-846831.html">Green Chalk Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">8</span>
+                            <span class="red-strok">YR</span>
+                            <a href="#" target="_blank">
+                                <span class="trustStampIcon"></span>
+                            </a>
+                            <a href="/Seller-4895159-AJANTA-EXPORT-INDUSTRIES/">AJANTA EXPORT INDUSTRIES</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Ambala Cantt, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-7" type="checkbox" value="value1">
+                    <label for="styled-checkbox-7" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/03355034/s/4/Green-Magnetic-Board.png" alt="Green Magnetic Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://eloraboard.tradeindia.com/green-magnetic-board-3355034.html">Green Magnetic Board</a>
+                            <a href="javascript:void(0)">
+                                <img class="dficon" src="https://tiimg.tistatic.com/new_website1/mobileSite/d-icon.png" alt="Domestic Inquiries"
+                                />
+                            </a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">3</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-8753155-ELORA-BOARD-WORKS/">ELORA BOARD WORKS</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Ahmedabad, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-8" type="checkbox" value="value1">
+                    <label for="styled-checkbox-8" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://tiimg.tistatic.com/fp/thumb/4/004/382/black-and-green-writing-boards-980.jpg" alt="Black And Green Writing Boards">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="https://www.tradeindia.com/fp4382980/Black-And-Green-Writing-Boards.html">Black And Green Writing Boards</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">6</span>
+                            <span class="red-strok">YR</span>
+                            <a href="#" target="_blank">
+                                <span class="trustStampIcon"></span>
+                            </a>
+                            <a href="/Seller-1558460-ROYAL-EDUCATIONAL-STORES/">ROYAL EDUCATIONAL STORES</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Delhi, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-9" type="checkbox" value="value1">
+                    <label for="styled-checkbox-9" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/04346599/s/4/Non-Magnetic-Chalk-Writing-Boards.jpg" alt="Non Magnetic Chalk Writing Boards">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.royaldisplaysolution.com/non-magnetic-chalk-writing-boards-4346599.html">Non Magnetic Chalk Writing Boards</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">1</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-12297564-ROYAL-DISPLAY-SOLUTION/">ROYAL DISPLAY SOLUTION</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Mumbai, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-10" type="checkbox" value="value1">
+                    <label for="styled-checkbox-10" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/04156435/s/4/Ceramic-Green-Chalk-Board.jpg" alt="Ceramic Green Chalk Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.aprdisplaysystems.net/ceramic-green-chalk-board-4156435.html">Ceramic Green Chalk Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">2</span>
+                            <span class="red-strok">YR</span>
+                            <a href="/Seller-2657569-APR-DISPLAY-SYSTEMS/">APR DISPLAY SYSTEMS</a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Mumbai, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productListing">
+                    <input class="styled-checkbox selectProduct" id="styled-checkbox-11" type="checkbox" value="value1">
+                    <label for="styled-checkbox-11" class="selectProduct"></label>
+
+                    <div class="productImg">
+                        <img src="https://cpimg.tistatic.com/02571127/s/5/GREEN-CHALK-BOARD.jpg" alt="Green Chalk Board">
+                    </div>
+                    <div class="productDes">
+                        <div class="productName">
+                            <a href="http://www.vijaishreewriting.com/green-chalk-board-2571127.html">Green Chalk Board</a>
+                        </div>
+                        <div class="companyName">
+                            <span class="blue-strok">11</span>
+                            <span class="red-strok">YR</span>
+                            <a href="#" target="_blank">
+                                <span class="trustStampIcon"></span>
+                            </a>
+                            <a href="/Seller-2297395-VIJAI-SHREE-WRITING-CONCEPT-PVT-LTD-/">VIJAI SHREE WRITING CONCEPT PVT. LTD. </a>
+                        </div>
+                        <div class="companyLocation">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> Meerut, India </div>
+                        <div class="sendInqueryBtn">
+                            <a href="#" class="btn btnYellow">Send Inquiry</a>
+                            <div class="phoneIcon">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+            <div style="position:relative">
+                <div class="browsetemplate">
+                    <div class="signal"></div>
+                </div>
+                <center>
+                    <span id="btnEnable">
+                        <a href="javascript:void(0);" class="viewAllBtnGrey inlineBlock">
+                            <span id="dataCount" class="colorBg"></span>
+                        </a>
+                    </span>
+                </center>
+            </div>
+        </div>
+
+        <input type="hidden" name="pagination_per_page" value="12" id="per_page_count" />
+        <input type="hidden" name="pagination_total_data" value="221" id="total_data_count" />
+
+        <input type="hidden" name="pagination_qs" id="pagination_qs" value="search_form_id=30&keyword=green+board&&all_products_count=221"
+        />
+
+        <input type="hidden" name="pagination_listing" id="pagination_listing" value="/mobile_site/search_action_data.html" />
+
+
+
+
+
+        <!--footer start -->
+        <div class="footerBar">
+            <p class="deskWebsite">
+                <a title="Desktop Website" href="https://www.tradeindia.com/search_action.html?search_form_id=30&keyword=green%2Bboard">Desktop Website</a>
+            </p>
+            <ul>
+                <li>
+                    <a href="/about-us/">About Us</a>
+                </li>
+                <li>
+                    <a href="/about-us/terms-of-use/terms-of-use.html">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="/about-us/contact-us/feedback.html">Send Feedback</a>
+                </li>
+                <li>
+                    <a href="/about-us/contact-us/">Contact Us</a>
+                </li>
+            </ul>
+            <span class="helpDeskNo">Buyer Helpdesk Number : +91-11- 4336 4336</span>
+            <span class="copyRight">Infocom Network Limited. All rights reserved. </span>
+            <div class="social-media">
+                <div class="app-headline">Keep in touch</div>
+                <a class="facebook" href="https://www.facebook.com/tradeindia" rel="nofollow" target="_blank"
+                    title="Facebook">
+                    <i class="fa fa-facebook-square" style="font-size:30px"></i>
+                </a>
+                <a class="twitter" href="http://www.twitter.com/tradeindia" rel="nofollow" target="_blank" title="Twitter">
+                    <i class="fa fa-twitter-square" style="font-size:30px"></i>
+                </a>
+                <a class="google-plus" href="https://plus.google.com/111532914140532908998?prsrc=3" rel="nofollow" target="_blank"
+                    title="g plus">
+                    <i class="fa fa-google-plus-square" style="font-size:30px"></i>
+                </a>
+                <a class="linkedin" href="https://www.linkedin.com/company/tradeindia" rel="nofollow" target="_blank" title="Linkedin">
+                    <i class="fa fa-linkedin-square" style="font-size:30px"></i>
+                </a>
+                <a class="youtube" href="https://www.youtube.com/c/tradeindia" rel="nofollow" target="_blank" title="You Tube">
+                    <i class="fa fa-youtube-play" style="font-size:30px"></i>
+                </a>
+            </div>
+        </div>
+        <!--footer end -->
+
+        <!--download app start -->
+        <div class="downloadAppBg clearfix">
+            <div class="footerLogo">
+                <img src="https://tiimg.tistatic.com/new_website1/mobileSite/ti-logo.png" alt="tradeindia">
+            </div>
+            <div class="downloadAppText">Download Tradeindia App</div>
+            <a href="https://www.tradeindia.com/mobile/download_inquiry_messenger.html" class="btn whiteBtn fright">Get APP</a>
+        </div>
+
+        <!--download app end-->
+
+    </div>
+
+    <div class="leftNavBg" off-canvas="slidebar-1 left reveal">
+        <div class="userArea">
+            <span class="clearfix">
+                <img alt="user" src="https://tiimg.tistatic.com/new_website1/mobileSite/user.png">
+            </span>
+            <a href="/login/login.html">Sign In</a> |
+            <a href="/join_now/join_now.html">Join Free</a>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i aria-hidden="true" class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="/Seller/">
+                    <i aria-hidden="true" class="fa fa-truck"></i> Suppliers</a>
+            </li>
+            <li>
+                <a href="/services/">
+                    <i aria-hidden="true" class="fa fa-users"></i> Service Providers</a>
+            </li>
+            <li>
+                <a href="https://www.tradeindia.com/my_tradeindia/" target="_blank">
+                    <i aria-hidden="true" class="fa fa-file-text"></i> Inquiries</a>
+            </li>
+            <li>
+                <a href="/sourcing/sourcing_requirements/">
+                    <i aria-hidden="true" class="fa fa-envelope"></i> RFQ</a>
+            </li>
+            <li>
+                <a href="https://www.tradeindia.com/TradeLeads/buy/" target="_blank">
+                    <i aria-hidden="true" class="fa fa-line-chart"></i> Buy Trade Leads</a>
+            </li>
+            <li>
+                <a href="https://www.tradeindia.com/TradeShows/" target="_blank">
+                    <i aria-hidden="true" class="fa fa-area-chart"></i> Trade Shows</a>
+            </li>
+            <li>
+                <a href="/about-us/contact-us/feedback.html">
+                    <i aria-hidden="true" class="fa fa-clipboard"></i> Feedback</a>
+            </li>
+        </ul>
+        <div class="sep"></div>
+        <ul>
+            <li class="getApp">
+                <a href="https://www.tradeindia.com/mobile/download_inquiry_messenger.html">
+                    <i aria-hidden="true" class="fa fa-download"></i> Get APP</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/pagination.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/swiper.min.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/animate.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/slidebars.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/scripts.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/search.js"></script>
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/datepicker-jquery-ui.js"></script>
+
+    <script src="https://st.tistatic.com/ver8093/js/mobile_site/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            var swiper = new Swiper('.swiper-container4', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 4,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: '.swiper-pagination4',
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: 7000,
+            });
+
+
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                spaceBetween: 30,
+                autoplay: 5000
+            });
+
+            var swiper = new Swiper('.swiper-container2', {
+                pagination: '.swiper-pagination2',
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 30,
+                autoplay: 5000,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+            });
+            var swiper = new Swiper('.swiper-container3', {
+                pagination: '.swiper-pagination3',
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 30,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+            });
+
+
+            //########## Autocomplete function End ############//
+            var demo1 = new autoComplete({
+                selector: '#search-val',
+                minChars: 1,
+                source: function (term, suggest) {
+                    var search_key = $(".searchInput").val();
+                    var response_get;
+                    $.ajax({
+                        type: "POST",
+                        url: "/utils/search_data_json.html?only_search_term=1&keyword=" + search_key,
+                        cache: false,
+                        dataType: 'json',
+                        success: function (response) {
+                            response_get = response;
+                            term = term.toLowerCase();
+                            var choices = response_get;
+                            var suggestions = [];
+                            for (i = 0; i < choices.length; i++)
+                                if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                            suggest(suggestions);
+                        },
+                        error: function (response) {
+                        }
+                    });
+                }
+            });
+
+            //########## Autocomplete function End ############//
+
+
+
+        });
+
+    </script>
+    <script type="text/javascript" src="https://st.tistatic.com/ver8093/js/mobile_site/ti_toggle.js"></script>
+</body>
+
+</html>

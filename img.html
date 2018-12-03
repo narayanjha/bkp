@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var startTime = new Date().getTime();
+        function doneLoading() {
+            var loadtime = new Date().getTime() - startTime;
+            document.getElementById("load").style.visibility = "hidden";
+                document.getElementById("imgId").style.visibility = "visible";
+                
+            console.log("image took " + loadtime + "ms to load");
+        };    
+        </script>
+        
+</head>
+<body>
+    <div id="load">Loading</div>
+    <img id="imgId" style="visibility: hidden" src="https://drawingsdaily.com/wp-content/uploads/2018/06/large-photos-of-nature-trees-tree-landscape-woods-nature-forest-wallpaper-hd-large-size.jpg" onload="doneLoading()">
+</body>
+</html>

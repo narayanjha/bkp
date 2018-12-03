@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+}
+.red {
+    background-color: #F44336 !important;
+}
+[type="checkbox"]+label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    margin-top: 2px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+}
+    [type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+    .red:checked + label:before {
+  top: -4px;
+  left: -3px;
+  width: 12px;
+  height: 22px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid red; /* You need to change the colour here */
+  border-bottom: 2px solid red; /* And here */
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%; 
+}
+
+
+/* filled in */
+[type="checkbox"].filled-in:checked+label:before {
+    top: 0;
+    left: 1px;
+    width: 8px;
+    height: 13px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+/* radio button */
+.radioLabel {
+  margin: 2em;
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.radioLabel input {
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+
+.radioLabel .outside {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: none;
+}
+
+.radioLabel .outside .inside {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  left: 3px;
+  top: 3px;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+}
+.no-transforms .inside {
+  left: auto;
+  top: auto;
+  width: 0;
+  height: 0;
+}
+
+.radioLabel input:checked + .outside .inside {
+  -webkit-animation: radio-select 0.1s linear;
+          animation: radio-select 0.1s linear;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.no-transforms input:checked + .outside .inside {
+  width: 10px;
+  height: 10px;
+}
+  </style>
+</head>
+<body>
+
+
+
+    <label class="radioLabel">
+      <input type="radio" class="radio-inline" name="radios" value="">
+      <span class="outside"><span class="inside"></span></span>Neopolitan</label>
+    <label class="radioLabel"><input type="radio" class="radio-inline" name="radios" value=""><span class="outside"><span class="inside"></span></span>Neopolitan</label>
+
+
+
+    <input type="checkbox" class="red" id="test5" />
+    <label for="test5">Red</label>
+    <!-- https://codepen.io/anon/pen/zmoaeK -->
+
+    <!-- <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Filled in</label> -->
+
+      <div style="position: relative">
+        <div style="position:absolute;">
+          dsafsdf dasf
+        </div>
+        <span style="border:1px solid #000">dsfsdf das fds fsdf</span>
+      </div>
+
+
+
+
+      <section>
+        <div id="test" onmouseover="myFunction()" onclick="alert('click event occured')" style="visibility: hidden; width:100%; height:150px;">
+          fdsafdsafdsfadsfdffd
+        </div>
+        
+        <div id="test1" onmouseover="myFunction()" onclick="alert('click event occured Test1')" style=" width:100%; height:150px; opacity: 0;">
+          fdsafdsafdsfadsfdffd
+        </div>
+      </section>
+
+      <script>
+
+        function myFunction() {
+    document.getElementById("myCheck").click();
+}
+      </script>
+</body>
+</html>

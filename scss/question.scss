@@ -1,0 +1,102 @@
+section{
+    text-align: center;
+    .shareQuestion{
+        ul{
+            text-align: right;
+            li{
+                display: inline-block;
+                padding: 1em 2em;
+                span{
+                    font-size: 1em;
+                }
+                &:hover{
+                    background: #414141;
+                }
+            }
+        }
+    }
+    .quizLeft{
+        display: inline-block;
+    }
+    .quizRight{
+        display: inline-block;
+    }
+    .quiz{    
+        display: inline-block;
+        width: 768px;
+        text-align: center;
+        vertical-align: top;
+        margin: 0 2%;
+        h2{
+            font-size: 2em;
+            color: #414141;
+            margin:0;
+            padding: 0.5em 0 0;
+            border-top: 3px solid #03467e
+        }
+        ul{
+            text-align: left;
+            position: relative;
+            li{
+            display:block;
+            // input[type="checkbox"]{
+            //     display: inline-block;
+            // }
+            input[type="radio"] {
+                appearance:none;
+                margin:0 40px;
+                width: 24px;
+                height: 24px;
+                background: #eeeeee;
+                box-shadow:
+                  inset 0 0 0 .4em white,
+                  0 0 0 .3em;
+                border-radius: 50%;
+                transition: .2s;
+                cursor:pointer;
+                color: #363945;
+              
+                &:hover,
+                &:checked {
+                  background: #363945;
+                  box-shadow:
+                  inset 0 0 0 .6em white,
+                  0 0 0 .3em;
+                }
+                
+                &:checked {
+                  background: #56be8e;
+                  box-shadow:
+                    inset 0 0 0 .4em white,
+                    0 0 0 .3em #56be8e;
+                } 
+              
+                &:focus { outline: 0; }
+              }
+            p{
+                display: inline-block;
+            }
+            label{
+                position: absolute;
+                bottom: 0;
+                color: #fd6767;
+            }
+            }
+        }
+        input[type="submit"] {
+            font-size: 1em;
+            display: inline-block;
+            padding: 0.8em 2em;
+            background: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.5;
+                animation: ease-in;
+            }
+        }
+    }
+}
+////////

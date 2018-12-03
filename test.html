@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" ></script>
+</head>
+<body>
+<div style="margin-bottom:20px;border:1px solid #000">ds</div>    
+<div style="margin-top:30px;border:1px solid #000">sd</div>
+<script>
+var winWidth = $(window).width();
+var winHeight = $(window).height();
+$(window).resize(function(){
+    $('div').css({
+    'width': winWidth,
+    'height': winHeight,
+});
+});
+
+
+
+$(document).ready(function() {
+    $(window).load(function() {
+    // page is fully loaded, including all frames, objects and images
+    alert("window is loaded");
+});
+    // document is loaded and DOM is ready
+    alert("document is ready");
+});
+
+</script>
+</body>
+</html> 

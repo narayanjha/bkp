@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        //reverse programme
+        function resverse(str) {
+            "use strict";
+            var my_var1 = 20;
+            var a = str.split(" ").reverse().join("");
+            return a;
+        }
+        console.log(resverse("welcome Jha Develop"));
+
+        function resFor(data) {
+            var newData = "";
+            for (i = data.length - 1; i >= 0; i--) {
+                newData += data[i];
+            }
+            return newData;
+        }
+        console.log(resFor("123456789"));
+
+        function reverseWords(str) {
+            return str.split(' ').reverse();
+        }
+
+        console.log(reverseWords("This is my testing programme"));
+
+        //Duplicate remove programme
+        function duplicateremovePro(arr) {
+            var exists = {}, outArr = [], elem;
+            for (var i = 0; i < arr.length; i++) {
+                elem = arr[i];
+                if (!exists[elem]) {
+                    outArr.push(elem);
+                    exists[elem] = true;
+                }
+            }
+            return outArr;
+        }
+        console.log(duplicateremovePro([1, 4562, 3, 4, 5, 6, 7, 8, 9, 5, 3, 1, 4562, 6, 7, 5, 4, 10]));
+        function rand5() {
+            return 1 + Math.random() * 4;
+        }
+        function rand7() {
+            return 5 + rand5() / 5 * 2;
+        }
+
+        console.log(rand7(7));
+
+        var colors = ['Green','Red','Blue'],clickEvent = function(){
+            return function(position){
+                 alert("My choose color is"+colors[position]);
+            };
+        };
+        for(var i=0; i<colors.length; i++){
+            document.getElementsByClassName(colors[i]).onclick = clickEvent(i);
+        }
+
+        
+
+    </script>
+
+
+
+<a href="#" class="green">Green</a>
+<a href="#" class="red">Red</a>
+<a href="#" class="blue">Blue</a>
+</body>
+
+</html>

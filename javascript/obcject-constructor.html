@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Object Contructors</title>
+    </head>
+    <body>
+        <script>
+            function computer(name,harddisk,memory){
+                this.name = name;
+                this.harddisk = harddisk;
+                this.memory = memory;
+            }
+            var Lenova = new computer("Lenova","1 TB","8 GB");
+            var Dell = new computer("Dell","5 TB","64 GB");
+            console.log(Lenova);
+            console.log(Dell);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Example</title>
+    <style>
+        .news{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        .news li{
+            max-width: 23%;
+            list-style-type: none;
+            background: #f4f4f48a;
+            border-bottom: 4px solid #e4e4e4;
+            margin-bottom: 3%;
+            box-shadow: 1px 1px 10px #cecece;
+        }
+        .news li img{
+            width: 100%;
+        }
+        @media (max-width:768px){
+            .news li{
+            max-width:50%;
+            }    
+        }
+        @media (max-width:460px){
+        .news li{
+            max-width:100%;
+        }
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+var numbers = [1,2,3,4];
+var sum = 0;
+for(var i = 0; i < numbers.length; i++){
+  sum += numbers[i]
+}
+console.log('Your sum is ' + sum);
+
+
+
+            function primeList(N) {
+            var list = [];
+            for (var i = 2; i != N; ++i)
+                if (isPrime(i)) list.push(i);
+            return list;
+            }
+            console.log(primeList([1,2,3,4]));
+
+
+            var startTime = new Date().getTime();
+            /*Image load time check start*/
+            function doneLoading() {
+                var loadtime = new Date().getTime() - startTime;
+                $(".load").css("display","none");
+                //document.getElementById("load").style.visibility = "hidden";
+                $(".imgLoad").css("visibility","visible")//    document.getElementById("imgId").style.visibility = "visible";
+                    
+                console.log("image took " + loadtime + "ms to load");
+            }
+            /*Image load time check End*/
+
+        $(document).ready(function(){
+
+            
+            function ajaxReq(url,methodType,callback){
+                return $.ajax({
+                    url : url,
+                    method : methodType,
+                    cache : false,
+                    async : false,
+                    dataType : "JSON"
+                })
+            }
+            var url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=031d448b9e5845ef84440cdcd925cac9";
+            function withPromise(url){
+            ajaxReq(url,"GET").then(function(jsonResponse){
+                // console.log(jsonResponse.articles[2].author);
+                // for (var i of jsonResponse.articles) {
+                //     console.log(i);
+                //    }
+                jsonResponse.articles.forEach(function(a){
+                    innerHTML = '<li><span><b>Author</b> : '+a.author+'</span>';
+                    innerHTML += '<h2><b>Title</b> : '+a.title+'</h2>';
+                    innerHTML += '<p><b>Description</b> : '+a.description+'</p>';
+                    innerHTML += '<img class="load" src="https://i.pinimg.com/originals/25/ef/28/25ef280441ad6d3a5ccf89960b4e95eb.gif" />';
+                    innerHTML += '<img src="'+a.urlToImage+'" class="imgLoad" style="visibility:hidden" onload="doneLoading()" />';
+                    innerHTML += '<span><b>Published</b> : '+a.publishedAt+'</span></li>';
+                    console.log(innerHTML);
+                    $("#news").append(innerHTML);
+                });                
+            }, function(reason){
+                        console.log("error in processing your request", reason);
+            })
+            }
+            withPromise(url);
+
+            /*Window Scroll function start*/
+            var pageNo = 1;
+            $(window).scroll(function(){
+                
+                if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                    pageNo++; //page number increment
+                    //ajaxReq(url+"&page="+pageNo,methodType,callback);
+                    withPromise(url+"&page="+pageNo);
+                    console.log(pageNo,url);
+                }else{
+					console.log("Else part");
+				}
+            });
+            /*Window Scroll function End*/
+
+        })
+    </script>
+
+</head>
+<body>
+        <!-- https://newsapi.org/v2/top-headlines?country=in&from=2016-09-04&to=2018-09-04&category=business&page=100&apiKey=031d448b9e5845ef84440cdcd925cac9
+
+
+        https://newsapi.org/v2/everything?q=apple&from=2018-08-04&to=2018-09-04&sortBy=popularity&apiKey=031d448b9e5845ef84440cdcd925cac9
+
+        https://newsapi.org/v2/everything?q=apple&from=2016-09-04&to=2018-09-04&page=100&sortBy=popularity&apiKey=031d448b9e5845ef84440cdcd925cac9 -->
+
+    <ul id="news" class="news">
+        <!-- <li><b>Author</b> : "Adam Clark Estes"</li>
+        <li><b>Title</b> : "iOS 11 Is So Broken That Apple Is Reportedly Delaying Features in iOS 12"</li>
+        <li><b>Description</b> : "It looks like iOS 12 won’t be as flashy or fun as Apple originally wanted it to be. Following months of embarrassing bugs and performance issues, the company is reportedly pushing some features originally slated for this year’s iOS 12 update back to 2019. Eng…"</li>
+        <li><img src="https://i.kinja-img.com/gawker-media/image/upload/s--wfDRhxdc--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/eyvgfphyzg3o7zbeozc8.jpg" /></li>
+        <li><b>Published At</b> : "2018-01-30T19:10:00Z"</li> -->
+    </ul>
+
+    <footer>
+        Trade India
+    </footer>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script>
+        $(function () {
+            $("#userDetails").validate({
+                rules: {
+                    //name: "required",
+                    email: "required",
+                    comment: "required"
+                },
+                messages: {
+                    //name: "Please enter name",
+                    email: "Please enter email",
+                    comment: "Please enter comment"
+                },
+                submitHandler: function (form) {
+                    //alert($("form").serialize());
+                    var data = $("form").serialize();
+                    var file_data = $("input[type='file']").prop('files')[0].name;
+                    
+                    data +='&file='+file_data ;
+                    console.log(data);
+                    //sendMail(data);
+                }
+            });
+        });
+        function sendMail(data) {
+            console.log("call function send mail data" + data);
+        }
+
+
+        // function ValidatePAN() {
+        //     var Obj = document.getElementById("name");
+        //     if (Obj.value != "") {
+        //         ObjVal = Obj.value;
+        //         var panPat = /^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/;
+        //         if (ObjVal.search(panPat) == -1) {
+        //             alert("Invalid Pan No");
+        //             Obj.focus();
+        //             return false;
+        //         }
+        //         else {
+        //            console.log("Correct Pan No");
+        //         }
+        //     }
+        // } 
+    </script>
+</head>
+
+<body>
+    <div>
+        <form method="post" action="" name="userDetails" id="userDetails">
+
+            <dl>
+                <dd>
+                    <input name="name" id="name" type="text" onblur="ValidatePAN(this);" placeholder="Enter Name">
+                </dd>
+
+            </dl>
+
+            <dl>
+                <dd>
+                    <input name="email" id="email" type="email" placeholder="Enter Email ID">
+                </dd>
+
+            </dl>
+
+            <dl>
+                <dd>
+                    <textarea name="comment" id="comment" cols="" rows="5" placeholder="Enter Suggestion"></textarea>
+                </dd>
+
+            </dl>
+            <dl>
+                <dd>
+                    <input name="usePic" id="file"  type="file" placeholder="Choose you picture">
+                </dd>
+
+            </dl>
+            <dl>
+
+                <dd>
+                    <input type="submit" id="btnSubmit" value="Send" class="button">
+                </dd>
+
+            </dl>
+
+            <div id="mail_success" class="success" style="display:none; color:#be3232">Your message has been sent successfully.</div>
+
+            <div id="mail_fail" style="display:none; color:#be3232">Sorry, error occured this time sending your message.</div>
+
+        </form>
+    </div>
+</body>
+
+</html>

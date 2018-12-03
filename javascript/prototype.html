@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Prototype</title>
+    </head>
+    <body>
+        <script>
+            var personDetail = function (name, age){
+                this.name = name;
+                this.age = age;
+            }
+            personDetail.prototype.name = function(){
+                return this.name+" is "+this.age;
+            }
+            var printDetail = new personDetail("Sagar",4);
+ 
+            console.log(printDetail);
+
+        </script>
+    </body>
+</html>

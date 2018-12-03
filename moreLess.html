@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Less or More test new feature in javascript</title>
+ 
+    <style>
+        article {
+            max-width: 800px;
+            max-height: 300px;
+            overflow-y: hidden;
+
+            /*Transition time is increased to accomodate the height */
+            transition: max-height 0.7s linear;
+        }
+
+        article.expanded {
+            max-height: 1500px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <article id="article">
+        <h3>Why You Should Care about the Ipsum</h3>
+        <p>Tart jelly beans croissant toffee oat cake soufflé gingerbread. Toffee powder cheesecake soufflé bonbon tiramisu
+            toffee powder gummi bears. Toffee tootsie roll powder soufflé apple pie. Fruitcake fruitcake soufflé sweet oat
+            cake cotton candy lemon drops biscuit. Chupa chups fruitcake dessert icing halvah oat cake. Lollipop candy canes
+            halvah bonbon marshmallow croissant. Wafer chupa chups cotton candy tart pudding pie cupcake. Candy canes gummies
+            macaroon pudding cupcake cupcake pudding jujubes. Donut halvah pie chocolate. Sugar plum dessert pudding icing
+            jelly-o cake. Gingerbread macaroon wafer. Caramels muffin jelly wafer carrot cake.</p>
+
+        <p>Marshmallow candy cookie danish cake. Cupcake croissant gummi bears pastry wafer. Macaroon croissant bonbon wafer.
+            Topping fruitcake topping biscuit. Tiramisu powder sesame snaps candy. Dessert donut cookie carrot cake dragée
+            muffin. Lollipop oat cake cookie candy canes fruitcake. Candy croissant candy canes croissant bear claw cake
+            brownie biscuit pie. Liquorice wafer wafer cookie lollipop gingerbread chocolate cake oat cake dessert. Pudding
+            gingerbread croissant cheesecake soufflé. Muffin gummies chocolate chocolate cupcake pastry. Sweet roll fruitcake
+            bear claw sweet caramels lemon drops lemon drops.</p>
+
+        <p>Pie sesame snaps cupcake macaroon bonbon oat cake ice cream oat cake topping. Brownie dessert toffee brownie jelly-o
+            chocolate jujubes halvah chocolate bar. Pudding gingerbread dessert. Bear claw tiramisu gummies pudding. Toffee
+            marshmallow jelly beans pie marzipan caramels ice cream lollipop powder. Dragée sesame snaps sugar plum. Marshmallow
+            sweet roll croissant tootsie roll icing. Dragée chocolate marzipan jelly cotton candy. Jujubes sweet chocolate
+            bar candy sweet roll lollipop biscuit dessert. Danish lollipop caramels toffee pastry. Wafer candy canes cupcake
+            chupa chups gummies lemon drops jujubes powder. Caramels danish marshmallow gummies. Jujubes muffin danish pie
+            icing brownie.</p>
+
+        <p>Toffee sweet tiramisu topping. Cookie fruitcake icing jelly-o sesame snaps. Caramels gingerbread ice cream pastry
+            donut. Gummies liquorice carrot cake sesame snaps muffin toffee dragée marzipan oat cake. Chocolate bar lemon
+            drops dessert. Sweet cupcake sesame snaps carrot cake dessert candy canes halvah tart ice cream. Jelly donut
+            chocolate bar chupa chups tootsie roll soufflé carrot cake tootsie roll gummi bears. Pastry jujubes soufflé marshmallow
+            toffee. Macaroon marshmallow oat cake jujubes caramels topping marzipan cupcake icing. Brownie jelly sweet tootsie
+            roll brownie jujubes cupcake pie. Cookie lollipop ice cream tiramisu jelly-o chocolate gummies. Tart biscuit
+            tiramisu biscuit cake tart danish topping cookie. Liquorice donut dragée tart. Dragée soufflé pudding halvah
+            cookie marshmallow jujubes sweet roll.</p>
+
+        <p>Pastry chocolate tiramisu bonbon jelly beans lollipop marshmallow chocolate cake. Icing carrot cake gummies cheesecake
+            dragée. Cake fruitcake gummies. Halvah jujubes toffee pudding bonbon soufflé brownie cupcake candy. Icing biscuit
+            cake jujubes. Chocolate bar candy canes caramels cupcake. </p>
+    </article>
+    <button id="seeMoreBtn">See More</button>
+    <script>
+            const seeMore = document.getElementById("seeMoreBtn");
+            const article = document.getElementById("article");
+    
+            seeMore.addEventListener("click", function() {
+                article.classList.toggle("expanded");
+    
+                const expanded = article.classList.contains("expanded");
+                if (expanded) {
+                    seeMore.innerHTML = "See Less";
+                } else {
+                    seeMore.innerHTML = "See More";
+                }
+            });
+        </script>
+</body>
+
+</html>

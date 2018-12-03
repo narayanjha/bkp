@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@font-face {
+  font-family: 'ModernPictogramsNormal';
+  src: url("http://www.bradysammons.com/codepen/fonts/modernpics-webfont.eot");
+  src: url("http://www.bradysammons.com/codepen/fonts/modernpics-webfont.eot?#iefix") format("embedded-opentype"), url("http://www.bradysammons.com/codepen/fonts/modernpics-webfont.woff") format("woff"), url("http://www.bradysammons.com/codepen/fonts/modernpics-webfont.ttf") format("truetype"), url("http://www.bradysammons.com/codepen/fonts/modernpics-webfont.svg#ModernPictogramsNormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    float:left;
+    width: 100%;
+}
+body {
+  padding: 0;
+  margin:0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* -------------------
+	Variables
+-------------------- */
+/* -------------------
+	Variables
+-------------------- */
+a.hexicon, a.hexicon span {
+  z-index: 10;
+  display: block;
+  width: 90px;
+  height: 45px;
+  background: #444;
+  position: absolute;
+  margin-top: 0px;
+  font-family: 'ModernPictogramsNormal', Arial, sans-serif;
+  text-decoration: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 60px;
+  color: #aaaaaa;
+}
+
+a.hexicon:before, a.hexicon span:before {
+  content: '';
+  position: absolute;
+  top: -29.60526px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 30px solid #444;
+}
+
+a.hexicon:after, a.hexicon span:after {
+  content: '';
+  position: absolute;
+  bottom: -29.60526px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 30px solid #444;
+}
+
+a.hexicon span {
+  margin-left: 50%;
+  left: -45px;
+  margin-top: 2.25px;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+/* -------------------
+	The "a" element acts as the border (back element)
+-------------------- */
+a.hexicon {
+  z-index: 0;
+  position: relative;
+  background: #aaaaaa;
+  width: 99px;
+  height: 49.5px;
+  top: 45px;
+  float: left;
+  margin: 0 22.5px 90px 0;
+}
+
+a.hexicon:before {
+  top: -32.6087px;
+  border-left: 49.5px solid transparent;
+  border-right: 49.5px solid transparent;
+  border-bottom: 32.84672px solid #aaaaaa;
+}
+
+a.hexicon:after {
+  bottom: -32.6087px;
+  border-left: 49.5px solid transparent;
+  border-right: 49.5px solid transparent;
+  border-top: 32.84672px solid #aaaaaa;
+}
+
+/* -------------------
+	Colors!!
+-------------------- */
+a.hexicon.green span {
+  background: #37AC37;
+  color: #c3ecc3;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+a.hexicon.green span:before {
+  border-bottom-color: #37AC37;
+}
+
+a.hexicon.green span:after {
+  border-top-color: #37AC37;
+}
+
+a.hexicon.green {
+  background: #c3ecc3;
+}
+
+a.hexicon.green:before {
+  border-bottom: 32.84672px solid #c3ecc3;
+}
+
+a.hexicon.green:after {
+  border-top: 32.84672px solid #c3ecc3;
+}
+
+a.hexicon.red span {
+  background: #AC3737;
+  color: #ecc3c3;
+}
+
+a.hexicon.red span:before {
+  border-bottom-color: #AC3737;
+}
+
+a.hexicon.red span:after {
+  border-top-color: #AC3737;
+}
+
+a.hexicon.red {
+  background: #ecc3c3;
+}
+
+a.hexicon.red:before {
+  border-bottom: 32.84672px solid #ecc3c3;
+}
+
+a.hexicon.red:after {
+  border-top: 32.84672px solid #ecc3c3;
+}
+
+a.hexicon.orange span {
+  background: #CC6D26;
+  color: #f5dcc9;
+}
+
+a.hexicon.orange span:before {
+  border-bottom-color: #CC6D26;
+}
+
+a.hexicon.orange span:after {
+  border-top-color: #CC6D26;
+}
+
+a.hexicon.orange {
+  background: #f5dcc9;
+}
+
+a.hexicon.orange:before {
+  border-bottom: 32.84672px solid #f5dcc9;
+}
+
+a.hexicon.orange:after {
+  border-top: 32.84672px solid #f5dcc9;
+}
+
+a.hexicon.pink span {
+  background: #C64AD1;
+  color: #f9edfa;
+}
+
+a.hexicon.pink span:before {
+  border-bottom-color: #C64AD1;
+}
+
+a.hexicon.pink span:after {
+  border-top-color: #C64AD1;
+}
+
+a.hexicon.pink {
+  background: #f9edfa;
+}
+
+a.hexicon.pink:before {
+  border-bottom: 32.84672px solid #f9edfa;
+}
+
+a.hexicon.pink:after {
+  border-top: 32.84672px solid #f9edfa;
+}
+
+a.hexicon.teal span {
+  background: #38A2BD;
+  color: #d0eaf1;
+}
+
+a.hexicon.teal span:before {
+  border-bottom-color: #38A2BD;
+}
+
+a.hexicon.teal span:after {
+  border-top-color: #38A2BD;
+}
+
+a.hexicon.teal {
+  background: #d0eaf1;
+}
+
+a.hexicon.teal:before {
+  border-bottom: 32.84672px solid #d0eaf1;
+}
+
+a.hexicon.teal:after {
+  border-top: 32.84672px solid #d0eaf1;
+}
+
+a.hexicon.blue span {
+  background: #3866BD;
+  color: #d0dbf1;
+}
+
+a.hexicon.blue span:before {
+  border-bottom-color: #3866BD;
+}
+
+a.hexicon.blue span:after {
+  border-top-color: #3866BD;
+}
+
+a.hexicon.blue {
+  background: #d0dbf1;
+}
+
+a.hexicon.blue:before {
+  border-bottom: 32.84672px solid #d0dbf1;
+}
+
+a.hexicon.blue:after {
+  border-top: 32.84672px solid #d0dbf1;
+}
+
+/* -------------------
+	Hover
+-------------------- */
+a:hover span {
+  -moz-transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15);
+  -webkit-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+}
+/* data box start */
+.dataBox{
+    display: flex;
+    flex-flow: wrap;
+    justify-content:center;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+.dataBox li{
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    background-color:#3866BD; 
+    margin: 10px;
+}
+
+
+
+
+  .cardBox {
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+  }
+  
+  .cardBox:hover .card {
+    transform: rotateY( 180deg);
+  }
+  
+  .card {
+    background: #222;
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+  }
+  
+  .card p {
+    margin-bottom: 1.8em;
+  }
+  
+  .card .front,
+  .card .back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .card .front strong {
+    background: #fff;
+    border-radius: 100%;
+    color: #222;
+    font-size: 1.5em;
+    line-height: 30px;
+    padding: 0 7px 4px 6px;
+  }
+  
+  .card .back {
+    transform: rotateY( 180deg);
+  }
+  
+  .card .back a {
+    padding: 0.3em 0.5em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0s;
+  }
+  
+  .card .back a:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+  }
+  
+  .cornflowerblue {
+    background: cornflowerblue;
+  }
+  
+  .cardBox:nth-child(2) .card .back {
+    background: orange;
+  }
+  
+  .cardBox:nth-child(3) .card .back {
+    background: yellowgreen;
+  }
+  
+  .cardBox:nth-child(4) .card .back {
+    background: tomato;
+  }
+  
+  .cardBox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+  }
+  
+  .cardBox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+  }
+  
+  .cardBox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+  }
+  
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  
+  @keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .cardBox {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+    }
+    .card {
+      height: 285px;
+    }
+    .cardBox:last-child {
+      margin-bottom: 3%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cardBox {
+      width: 94.5%;
+    }
+    .card {
+      height: 260px;
+    }
+  }
+/* databox end */

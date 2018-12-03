@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    (function($) {
+        "use strit";
+        alert();
+        $(document).ready(function(){
+        $("#list").hide()
+        $("#demo").on('click',function(){
+            $("#list").show()
+        });
+        $("#list li").on('click',function(){
+            $("#list").hide()
+        });
+    });
+    })($);
+    const data = [
+                {
+                    name :"Narayan",
+                    age:29
+            },
+            {
+                    name :"jai",
+                    age:3
+            }
+        ]
+        console.table(data);
+        console.info(data);
+    </script>
+    <style type="text/css">
+        .demo{
+            float: left;
+        }
+        .list {
+            display: inline-block;
+            padding: 0px;
+            background: #fcfdfd;
+            box-shadow: 3px 3px 2px #2b2b2b1a;
+        }
+        .list li{
+            list-style-type: none;
+            padding: 5px 20px 5px 10px;
+            cursor: pointer
+        }
+        .list li:first-child{
+            padding-top: 10px;
+        }
+        .list li:last-child{
+            padding-bottom: 10px;
+        }
+        .list li:hover{
+            background: #d6d6d6
+        }
+        .tooltip {
+	display:none;
+	position:absolute;
+	border:1px solid #333;
+	background-color:#161616;
+	border-radius:5px;
+	padding:10px;
+	color:#fff;
+	font-size:12px Arial;
+}
+    </style>
+</head>
+<body>
+    <div contenteditable="true">
+    <div id="demo" class="demo">Demo 1</div>
+    <ul id="list" class="list">
+        <li title="Test ds afajkl ds faskla fjsdal faslf sdkl fjlsafj lsj f" class="masterTooltip">List A</li>
+        <li>List B</li>
+        <li title="Test ds afajkl ds faskla fjsdal faslf sdkl fjlsafj lsj f" class="masterTooltip">List C</li>
+        <li>List D</li>
+        <li>List E</li>
+    </ul>
+</div>
+<script>
+(function($){
+    "use strict";
+         my_var1 = 20;
+
+    
+    // Tooltip only Text
+    $('.masterTooltip').hover(function(){
+            // Hover over code
+            var title = $(this).attr('title');
+            $(this).data('tipText', title).removeAttr('title');
+            $('<p class="tooltip"></p>')
+            .text(title)
+            .appendTo('body')
+            .fadeIn('slow');
+    }, function() {
+            // Hover out code
+            $(this).attr('title', $(this).data('tipText'));
+            $('.tooltip').remove();
+    }).mousemove(function(e) {
+            var mousex = e.pageX + 20; //Get X coordinates
+            var mousey = e.pageY + 10; //Get Y coordinates
+            $('.tooltip')
+            .css({ top: mousey, left: mousex })
+    });
+    });
+</script>
+</body>
+</html>
+
+
+<!--$("#my_form").submit(function(event){
+    event.preventDefault(); //prevent default action 
+    var post_url = $(this).attr("action"); //get form action url
+    var request_method = $(this).attr("method"); //get form GET/POST method
+    var form_data = new FormData(this); //Creates new FormData object
+    $.ajax({
+        url : post_url,
+        type: request_method,
+        data : form_data,
+        contentType: false,
+        cache: false,
+        processData:false
+    }).done(function(response){ //
+        $("#server-results").html(response);
+    });
+});
+
+
+
+$(document).on('click','#popup_submit',function(){
+                $("#popup_formID").validate();
+                if($("#popup_formID").valid() == false){
+                        return false;
+                }
+                send_inq_submit_ajax();
+                });
+
+-->

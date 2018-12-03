@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag and Drop</title>
+    <style>
+        .main {
+            display: block;
+            max-width: 768px;
+            margin: 0 auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .main div div span {
+            display: table;
+            padding: 10px;
+            color: #1776dc;
+            cursor: pointer;
+        }
+
+        .rowfirst {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .rowfirst div {
+            display: block;
+            width: 47%;
+            border: 1px solid #f4f4f4;
+            margin: 1%;
+        }
+
+        .rowsecond {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .rowsecond div {
+            display: block;
+            width: 47%;
+            border: 1px solid #f4f4f4;
+            margin: 1%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="rowfirst">
+            <div class="cellOne" data-draggable="target"></div>
+            <div class="cellTwo" data-draggable="target" id="cellTwo"></div>
+        </div>
+        <div class="rowsecond">
+            <div class="cellThree" data-draggable="target"></div>
+            <div class="cellFour" data-draggable="target" id="cellFour">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var list = [
+                {
+                    "listTwo": [
+                        "Apple",
+                        "Orange",
+                        "Grapes",
+                        "Banana",
+                        "Pineapple"
+                    ],
+                    "ListFour": [
+                        "Mouse",
+                        "Keyboard",
+                        "TFT",
+                        "CPU",
+                        "Cable",
+                        "RAM"
+                    ]
+                }
+            ];
+            list[0].listTwo.forEach(function (ListOne) {
+
+                var cellId = document.getElementById("cellTwo");
+                var node = document.createElement("span");
+                var attTag = document.createAttribute("data-draggable");
+                attTag.value = "item";
+                node.setAttributeNode(attTag);
+                var textnode = document.createTextNode(ListOne);
+                node.appendChild(textnode);
+                cellId.appendChild(node);
+            });
+            list[0].ListFour.forEach(function (listFour) {
+                console.log(listFour);
+                var cellId = document.getElementById("cellFour");
+                var node = document.createElement("span");
+                var attTag = document.createAttribute("data-draggable");
+                attTag.value = "item";
+                node.setAttributeNode(attTag);
+                var textnode = document.createTextNode(listFour);
+                node.appendChild(textnode);
+                cellId.appendChild(node);
+            });
+            if (!document.querySelectorAll || !('draggable' in document.createElement('span')) || window.opera) { return; }
+            for (var
+                targets = document.querySelectorAll('[data-draggable="target"]'),
+                len = targets.length,
+                i = 0; i < len; i++) {
+                targets[i].setAttribute('aria-dropeffect', 'none');
+            }
+            for (var
+                items = document.querySelectorAll('[data-draggable="item"]'),
+                len = items.length,
+                i = 0; i < len; i++) {
+                items[i].setAttribute('draggable', 'true');
+                items[i].setAttribute('aria-grabbed', 'false');
+                items[i].setAttribute('tabindex', '0');
+            }
+            var selections =
+                {
+                    items: [],
+                    owner: null,
+                    droptarget: null
+                };
+            function addSelection(item) {
+                if (!selections.owner) {
+                    selections.owner = item.parentNode;
+                }
+                else if (selections.owner != item.parentNode) {
+                    return;
+                }
+                item.setAttribute('aria-grabbed', 'true');
+                selections.items.push(item);
+            }
+            function removeSelection(item) {
+                item.setAttribute('aria-grabbed', 'false');
+                for (var len = selections.items.length, i = 0; i < len; i++) {
+                    if (selections.items[i] == item) {
+                        selections.items.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+            function clearSelections() {
+                if (selections.items.length) {
+                    selections.owner = null;
+                    for (var len = selections.items.length, i = 0; i < len; i++) {
+                        selections.items[i].setAttribute('aria-grabbed', 'false');
+                    }
+                    selections.items = [];
+                }
+            }
+            function hasModifier(e) {
+                return (e.ctrlKey || e.metaKey || e.shiftKey);
+            }
+            function addDropeffects() {
+                for (var len = targets.length, i = 0; i < len; i++) {
+                    if
+      (
+                        targets[i] != selections.owner
+                        &&
+                        targets[i].getAttribute('aria-dropeffect') == 'none'
+                    ) {
+                        targets[i].setAttribute('aria-dropeffect', 'move');
+                        targets[i].setAttribute('tabindex', '0');
+                    }
+                }
+                for (var len = items.length, i = 0; i < len; i++) {
+                    if
+      (
+                        items[i].parentNode != selections.owner
+                        &&
+                        items[i].getAttribute('aria-grabbed')
+                    ) {
+                        items[i].removeAttribute('aria-grabbed');
+                        items[i].removeAttribute('tabindex');
+                    }
+                }
+            }
+            function clearDropeffects() {
+                if (selections.items.length) {
+                    for (var len = targets.length, i = 0; i < len; i++) {
+                        if (targets[i].getAttribute('aria-dropeffect') != 'none') {
+                            targets[i].setAttribute('aria-dropeffect', 'none');
+                            targets[i].removeAttribute('tabindex');
+                        }
+                    }
+                    for (var len = items.length, i = 0; i < len; i++) {
+                        if (!items[i].getAttribute('aria-grabbed')) {
+                            items[i].setAttribute('aria-grabbed', 'false');
+                            items[i].setAttribute('tabindex', '0');
+                        }
+                        else if (items[i].getAttribute('aria-grabbed') == 'true') {
+                            items[i].setAttribute('tabindex', '0');
+                        }
+                    }
+                }
+            }
+            function getContainer(element) {
+                do {
+                    if (element.nodeType == 1 && element.getAttribute('aria-dropeffect')) {
+                        return element;
+                    }
+                }
+                while (element = element.parentNode);
+
+                return null;
+            }
+            document.addEventListener('mousedown', function (e) {
+                if (e.target.getAttribute('draggable')) {
+                    clearDropeffects();
+                    if
+      (
+                        !hasModifier(e)
+                        &&
+                        e.target.getAttribute('aria-grabbed') == 'false'
+                    ) {
+                        clearSelections();
+                        addSelection(e.target);
+                    }
+                }
+                else if (!hasModifier(e)) {
+                    clearDropeffects();
+                    clearSelections();
+                }
+                else {
+                    clearDropeffects();
+                }
+
+            }, false);
+            document.addEventListener('mouseup', function (e) {
+                if (e.target.getAttribute('draggable') && hasModifier(e)) {
+                    if (e.target.getAttribute('aria-grabbed') == 'true') {
+                        removeSelection(e.target);
+                        if (!selections.items.length) {
+                            selections.owner = null;
+                        }
+                    }
+                    else {
+                        addSelection(e.target);
+                    }
+                }
+
+            }, false);
+            document.addEventListener('dragstart', function (e) {
+                if (selections.owner != e.target.parentNode) {
+                    e.preventDefault();
+                    return;
+                }
+                if
+  (
+                    hasModifier(e)
+                    &&
+                    e.target.getAttribute('aria-grabbed') == 'false'
+                ) {
+                    addSelection(e.target);
+                }
+                e.dataTransfer.setData('text', '');
+                addDropeffects();
+
+            }, false);
+            var related = null;
+            document.addEventListener('dragenter', function (e) {
+                related = e.target;
+
+            }, false);
+            document.addEventListener('dragleave', function (e) {
+                var droptarget = getContainer(related);
+                if (droptarget == selections.owner) {
+                    droptarget = null;
+                }
+                if (droptarget != selections.droptarget) {
+                    if (selections.droptarget) {
+                        selections.droptarget.className =
+                            selections.droptarget.className.replace(/ dragover/g, '');
+                    }
+                    if (droptarget) {
+                        droptarget.className += ' dragover';
+                    }
+                    selections.droptarget = droptarget;
+                }
+
+            }, false);
+            document.addEventListener('dragover', function (e) {
+                if (selections.items.length) {
+                    e.preventDefault();
+                }
+
+            }, false);
+
+
+            document.addEventListener('dragend', function (e) {
+                if (selections.droptarget) {
+                    for (var len = selections.items.length, i = 0; i < len; i++) {
+                        selections.droptarget.appendChild(selections.items[i]);
+                    }
+                    e.preventDefault();
+                }
+
+                if (selections.items.length) {
+                    clearDropeffects();
+                    if (selections.droptarget) {
+                        clearSelections();
+                        selections.droptarget.className =
+                            selections.droptarget.className.replace(/ dragover/g, '');
+                        selections.droptarget = null;
+                    }
+                }
+
+            }, false);
+        })();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Closure</title>
+    </head>
+    <body>
+        <div>
+            <input type="button" onclick="add()" />
+        </div>
+        <script>
+            var add = (function () {
+                var counter = 0;
+                return function () {
+                    counter += 1; 
+                    return counter
+                    }
+            })();
+        </script>
+    </body>
+</html>

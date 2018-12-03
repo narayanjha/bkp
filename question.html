@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/question.css" />
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#quiz").validate({
+                rules: {
+                    answer: "required"
+                },
+                messages: {
+                    answer: "Please enter your firstname"
+                },
+              submitHandler: function (form) {
+                var formData = $("form#quiz").serialize();
+                    var x = JSON.stringify(formData);
+                   console.log(x);
+              //form.submit();
+              }
+                
+            });
+
+            
+            
+
+        });
+    </script>
+    <style>
+        .focusany{
+            border: none;
+            box-shadow: -8px 10px 0px -7px rgb(86, 163, 10), 8px 10px 0px -7px rgb(86, 163, 10);
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.6s;
+            
+        }
+        .focusany:focus{
+            outline: none;
+            box-shadow: -8px 10px 0px -7px #e60c41, 8px 10px 0px -7px #e60c41;
+            transition: box-shadow 0.6s;
+        }
+        </style>
+</head>
+
+<body>
+    <section>
+        <div class="shareQuestion">
+            <ul>
+                <li>
+                    <span>Faceboook</span>
+                </li>
+                <li>
+                    <span>Twitter</span>
+                </li>
+                <li>
+                    <span>Linkedin</span>
+                </li>
+                <li>
+                    <span>Google Pluse</span>
+                </li>
+            </ul>
+        </div>
+        <div class="quizLeft">
+            <img src="https://tpc.googlesyndication.com/simgad/18029738676664342564" />
+        </div>
+        <div class="quiz">
+            <form id="quiz">
+                <h2>What is the capital of India?</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" value="Delhi" />
+                        <p>Delhi</p>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" value="Mumbai" />
+                        <p>Mumbai</p>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" value="Kolkata" />
+                        <p>Kolkata</p>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" value="Chennai" />
+                        <p>Chennai</p>
+                    </li>
+                </ul>
+                <input type="submit" value="Submit" />
+            </form>
+            <h3>Recent</h3>
+            <input type="text" name="test" class="focusany" />
+
+        </div>
+        <div class="quizRight">
+            <img src="https://tpc.googlesyndication.com/simgad/18029738676664342564" />
+        </div>
+    </section>
+</body>
+
+</html>
